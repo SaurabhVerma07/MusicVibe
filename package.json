@@ -1,0 +1,29 @@
+{
+  "name": "jamify-music-app",
+  "version": "1.0.0",
+  "description": "Jamify Music Streaming Platform with User Authentication and Feedback System",
+  "main": "server/server.js",
+  "scripts": {
+    "start": "node server/server.js",
+    "dev": "nodemon server/server.js",
+    "init-db": "node server/init-db.js"
+  },
+  "keywords": [
+    "music",
+    "streaming",
+    "jamify",
+    "authentication"
+  ],
+  "author": "Jamify Team",
+  "license": "MIT",
+  "dependencies": {
+    "express": "^4.18.2",
+    "sqlite3": "^5.1.6",
+    "bcryptjs": "^2.4.3",
+    "cors": "^2.8.5"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.1"
+  }
+}
+
