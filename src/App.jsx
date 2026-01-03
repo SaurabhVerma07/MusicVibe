@@ -1,0 +1,35 @@
+import { BrowserRouter as Router, Routes, Route } from 'react-router-dom'
+import { AuthProvider } from './context/AuthContext'
+import { MusicProvider } from './context/MusicContext'
+import Home from './pages/Home'
+import Login from './pages/Login'
+import Signup from './pages/Signup'
+import Feedback from './pages/Feedback'
+import Trending from './pages/Trending'
+import Contact from './pages/Contact'
+import AdminFeedback from './pages/AdminFeedback'
+import TestDatabase from './pages/TestDatabase'
+
+function App() {
+  return (
+    <AuthProvider>
+      <MusicProvider>
+        <Router>
+          <Routes>
+            <Route path="/" element={<Home />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/signup" element={<Signup />} />
+            <Route path="/feedback" element={<Feedback />} />
+            <Route path="/trending" element={<Trending />} />
+            <Route path="/contact" element={<Contact />} />
+            <Route path="/admin-feedback" element={<AdminFeedback />} />
+            <Route path="/test-database" element={<TestDatabase />} />
+          </Routes>
+        </Router>
+      </MusicProvider>
+    </AuthProvider>
+  )
+}
+
+export default App
+
